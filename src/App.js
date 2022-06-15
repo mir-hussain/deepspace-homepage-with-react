@@ -1,7 +1,11 @@
-const { default: Home } = require("./pages/home/Home");
+import Home from "./pages/home/Home";
 
 function App() {
-  return <Home />;
+  return (
+    <div className='bg-dark '>
+      <Home />
+    </div>
+  );
 }
 
 export default App;
