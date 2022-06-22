@@ -1,21 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import Logo from "../assets/images/logo.svg";
-import { gsap } from "gsap";
+import gsap from "gsap";
 
 const Navbar = () => {
   let navRef = useRef(null);
 
-  useEffect(() => {
-    gsap.to(navRef, { opacity: 0 });
-  }, []);
+  // useEffect(() => {
+  //   gsap.to(navRef, { opacity: 0 });
+  // }, []);
 
   return (
-    <header
-      ref={(el) => {
-        navRef = el;
-      }}
-      className='sticky top-0 z-20'
-    >
+    <header className='sticky top-0 z-20'>
       <nav className='navbar flex justify-center items-center relative z-50 gap-16 h-16 text-white text-lg font-medium'>
         <img className='h-7 cursor-pointer' src={Logo} alt='' />
         <ul className='flex gap-8'>
@@ -33,7 +28,12 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div className='navbar-background bg-black bg-opacity-50 backdrop-blur-md h-16 w-full absolute top-0'></div>
+      <div
+        ref={(el) => {
+          navRef = el;
+        }}
+        className='navbar-background bg-black bg-opacity-50 backdrop-blur-md h-16 w-full absolute top-0'
+      ></div>
     </header>
   );
 };

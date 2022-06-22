@@ -11,7 +11,7 @@ const Partners = () => {
         <dir></dir>
         <dir></dir>
         <dir></dir>
-        <dir></dir>
+        <dir className='test'></dir>
       </div>
     </div>
   );
