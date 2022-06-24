@@ -10,6 +10,7 @@ function App() {
       visibility: "visible",
       autoAlpha: 1,
       duration: 2,
+      delay: 0.5,
     });
   }, []);
 
